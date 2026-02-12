@@ -52,17 +52,17 @@ This diagram outlines the real-time inference pipeline from camera input to emot
 
 ```mermaid
 graph TD
-    Start([Camera Input]) --> Capture[frame = cap.read()]
+    Start([Camera Input]) --> Capture["frame = cap.read()"]
     Capture --> Grayscale[Convert to Grayscale]
-    Grayscale --> Detect[Face Detection<br/>(Haar Cascade)]
+    Grayscale --> Detect["Face Detection<br/>(Haar Cascade)"]
     
-    Detect --> Check{Faces Found?}
+    Detect --> Check{"Faces Found?"}
     Check -->|No| Display[Show Frame]
     Check -->|Yes| Loop[For Each Face]
     
     Loop --> ROI[Extract Face ROI]
     ROI --> Resize[Resize to 48x48]
-    Resize --> Norm[Normalize pixel values<br/>(0-1)]
+    Resize --> Norm["Normalize pixel values<br/>(0-1)"]
     
     Norm --> Model[CNN Model Prediction]
     Model --> Argmax[Get Max Probability Index]
@@ -72,7 +72,7 @@ graph TD
     UI --> Stats[Update Stats Dashboard]
     Stats --> Display
     
-    Display --> Stop{Key 'q' Pressed?}
+    Display --> Stop{"Key 'q' Pressed?"}
     Stop -->|No| Capture
     Stop -->|Yes| End([End Program])
     
