@@ -202,12 +202,13 @@ FaceEmotionDetection_Using_Python/
 
 ---
 
-## 📞 8. Support & Contact
+## 📞 11. Support & Contact
 
 **For Questions:**
-- Please refer to the project repository or contact the maintenance team.
+- Email: sameer.s@agilecas.com
 
 ---
 
 **Document Version**: 1.0
 **Last Updated**: February 2026
+
